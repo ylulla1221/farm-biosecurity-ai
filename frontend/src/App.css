@@ -1,0 +1,697 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap');
+
+
+/* -----------------------------------------
+   Global
+----------------------------------------- */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  background: #737d72;
+  color: #f3f4ed;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* -----------------------------------------
+   Main Layout
+----------------------------------------- */
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  background: #737d72;
+}
+
+
+/* -----------------------------------------
+   Sidebar
+----------------------------------------- */
+
+.sidebar {
+  width: 240px;
+  min-height: 100vh;
+  background: #30352f;
+  padding: 28px 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px;
+  margin-bottom: 50px;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: #d7e84a;
+  color: #30352f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand h2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.brand span {
+  display: block;
+  color: #aeb6aa;
+  font-size: 11px;
+  margin-top: 2px;
+}
+
+
+/* Navigation */
+
+.navigation {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: #aeb6aa;
+  padding: 12px 13px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.nav-item:hover {
+  background: #3a4039;
+  color: #f3f4ed;
+}
+
+.nav-item.active {
+  background: #444b43;
+  color: #f3f4ed;
+}
+
+.nav-item.active svg {
+  color: #d7e84a;
+}
+
+
+/* Sidebar Footer */
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 12px;
+  color: #aeb6aa;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* -----------------------------------------
+   Status Dot
+----------------------------------------- */
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #d7e84a;
+  display: inline-block;
+}
+
+
+/* -----------------------------------------
+   Main Content
+----------------------------------------- */
+
+.main-content {
+  flex: 1;
+  padding: 36px 46px;
+  max-width: 1500px;
+}
+
+
+/* -----------------------------------------
+   Top Bar
+----------------------------------------- */
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 42px;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 1.5px;
+  color: #c7cec4;
+  font-weight: 600;
+}
+
+.topbar h1 {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+.farm-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #858f84;
+  padding: 9px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+
+/* -----------------------------------------
+   Introduction
+----------------------------------------- */
+
+.intro {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.intro h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+}
+
+.intro p {
+  color: #c7cec4;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.new-assessment {
+  border: none;
+  background: #d7e84a;
+  color: #30352f;
+  padding: 12px 17px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+
+/* -----------------------------------------
+   Metric Cards
+----------------------------------------- */
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.metric-card {
+  background: #858f84;
+  border: 1px solid rgba(243, 244, 237, 0.12);
+  border-radius: 18px;
+  padding: 23px;
+  min-height: 190px;
+}
+
+.metric-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #dce2d8;
+  font-size: 13px;
+}
+
+.metric-header svg {
+  color: #d7e84a;
+}
+
+.metric-value {
+  font-size: 39px;
+  font-weight: 700;
+  margin-top: 22px;
+  letter-spacing: -1.5px;
+}
+
+.metric-value span {
+  font-size: 17px;
+  color: #c7cec4;
+  margin-left: 3px;
+}
+
+.metric-status {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.metric-status.medium {
+  color: #e6c85c;
+}
+
+.metric-status.moderate {
+  color: #d7e84a;
+}
+
+.metric-description {
+  color: #c7cec4;
+  font-size: 11px;
+  margin-top: 12px;
+}
+
+
+/* -----------------------------------------
+   Lower Dashboard
+----------------------------------------- */
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+}
+
+.panel {
+  background: #30352f;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid rgba(243, 244, 237, 0.08);
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 26px;
+}
+
+.panel-header h3 {
+  font-size: 19px;
+  margin-top: 5px;
+}
+
+.panel-header svg {
+  color: #d7e84a;
+}
+
+
+/* -----------------------------------------
+   Breakdown
+----------------------------------------- */
+
+.breakdown {
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+}
+
+.breakdown-item > div:first-child {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.breakdown-item strong {
+  color: #f3f4ed;
+}
+
+.progress {
+  height: 6px;
+  background: #4a5149;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #d7e84a;
+  border-radius: 10px;
+}
+
+
+/* -----------------------------------------
+   Recommendations
+----------------------------------------- */
+
+.recommendations {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.recommendation {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(243, 244, 237, 0.08);
+}
+
+.recommendation:last-child {
+  border-bottom: none;
+}
+
+.recommendation-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+
+.recommendation.high .recommendation-dot {
+  background: #e57373;
+}
+
+.recommendation.medium .recommendation-dot {
+  background: #e6c85c;
+}
+
+.recommendation strong {
+  font-size: 13px;
+}
+
+.recommendation p {
+  color: #aeb6aa;
+  font-size: 11px;
+  margin-top: 4px;
+  line-height: 1.5;
+}
+
+
+/* -----------------------------------------
+   Responsive
+----------------------------------------- */
+
+@media (max-width: 1000px) {
+
+  .sidebar {
+    width: 200px;
+  }
+
+  .main-content {
+    padding: 30px;
+  }
+
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .sidebar {
+    display: none;
+  }
+
+  .main-content {
+    padding: 22px;
+  }
+
+  .intro {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .intro h2 {
+    font-size: 27px;
+  }
+
+}
+/* -----------------------------------------
+   Farm Assessment
+----------------------------------------- */
+
+.assessment-panel {
+  background: #30352f;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 18px;
+  border: 1px solid rgba(243, 244, 237, 0.08);
+}
+
+.assessment-panel .panel-header {
+  margin-bottom: 24px;
+}
+
+
+/* -----------------------------------------
+   Input Grid
+----------------------------------------- */
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+}
+
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+
+.input-group label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #c7cec4;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+
+.input-group label svg {
+  color: #d7e84a;
+}
+
+
+.input-group input {
+  width: 100%;
+  background: #444b43;
+  border: 1px solid rgba(243, 244, 237, 0.1);
+  color: #f3f4ed;
+  border-radius: 9px;
+  padding: 11px 12px;
+  font-size: 13px;
+  outline: none;
+  transition: 0.2s ease;
+}
+
+
+.input-group input:focus {
+  border-color: #d7e84a;
+  box-shadow: 0 0 0 2px rgba(215, 232, 74, 0.08);
+}
+
+
+.input-group input:hover {
+  border-color: rgba(243, 244, 237, 0.25);
+}
+
+
+/* Remove number input arrows */
+
+.input-group input::-webkit-inner-spin-button,
+.input-group input::-webkit-outer-spin-button {
+  opacity: 0.5;
+}
+
+
+/* -----------------------------------------
+   Assessment Button
+----------------------------------------- */
+
+.assess-button {
+  margin-top: 22px;
+  border: none;
+  background: #d7e84a;
+  color: #30352f;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+
+.assess-button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.04);
+}
+
+
+.assess-button:active {
+  transform: translateY(0);
+}
+
+
+.assess-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* -----------------------------------------
+   Loading Animation
+----------------------------------------- */
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+
+}
+
+
+/* -----------------------------------------
+   Error Message
+----------------------------------------- */
+
+.error-message {
+  margin-top: 15px;
+  padding: 11px 14px;
+  border-radius: 9px;
+  background: rgba(229, 115, 115, 0.12);
+  border: 1px solid rgba(229, 115, 115, 0.25);
+  color: #f0aaaa;
+  font-size: 12px;
+}
+
+
+/* -----------------------------------------
+   Recommendation Empty State
+----------------------------------------- */
+
+.no-recommendations {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+}
+
+
+.no-recommendations svg {
+  color: #d7e84a;
+  margin-bottom: 5px;
+}
+
+
+.no-recommendations strong {
+  font-size: 14px;
+}
+
+
+.no-recommendations p {
+  color: #aeb6aa;
+  font-size: 11px;
+}
+
+
+/* -----------------------------------------
+   Risk Colors
+----------------------------------------- */
+
+.metric-status.low {
+  color: #8fcb9b;
+}
+
+
+.metric-status.medium {
+  color: #e6c85c;
+}
+
+
+.metric-status.high {
+  color: #e57373;
+}
+
+
+/* -----------------------------------------
+   Better Responsive Form
+----------------------------------------- */
+
+@media (max-width: 1200px) {
+
+  .form-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+}
+
+
+@media (max-width: 800px) {
+
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .assessment-panel {
+    padding: 18px;
+  }
+
+}
